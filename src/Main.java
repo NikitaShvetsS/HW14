@@ -1,3 +1,6 @@
+import exceptions.DataException;
+import exceptions.SizeException;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -21,9 +24,9 @@ public class Main {
             System.out.println("Result 1: " + result1);
             int result2 = calculator.doCalc(array2);
             System.out.println("Result 2: " + result2);
-        } catch (ArrayValueCalculator.ArraySizeException e) {
+        } catch (SizeException e) {
             System.out.println("ArraySizeException: " + e.getMessage());
-        } catch (ArrayValueCalculator.ArrayDataException e) {
+        } catch (DataException e) {
             System.out.println("ArrayDataException: " + e.getMessage());
         }
     }
